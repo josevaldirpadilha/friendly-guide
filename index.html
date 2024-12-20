@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livro Refletir</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<style>
+    *body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #f6f6f7, #e9ecef);
+    color: #333;
+}
+
+header {
+    background-image: url(img/15.png);
+    color: #fff;
+    padding: 1.5rem;
+    text-align: center;
+    position: relative;
+}
+
+#logo-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+#logo {
+    max-width: 150px;
+    height: auto;
+}
+
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2.5rem;
+    margin: 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+}
+
+main {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background: #817878;  
+}
+
+#intro p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: #b6b986;
+}
+
+#payment {
+    background: #99aed8;
+    border: 2px solid #1f1e21;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 3px 8px rgba(6, 6, 6, 0.15);
+}
+
+#qr-container {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+#qr-container img {
+    max-width: 250px;
+    height: auto;
+    margin-bottom: 1rem;
+    border: 2px solid #b90f0f;
+    border-radius: 8px;
+}
+
+#payment-confirm {
+    width: 80%;
+    padding: 0.75rem;
+    border: 2px solid #9e8484;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+#confirm-button {
+    display: inline-block;
+    background-color: #0014ea;
+    color: #fff;
+    border: none;
+    border-radius: 40px;
+    padding: 0.75rem 2rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#confirm-button:hover {
+    background-color: #4500b5;
+    transform: scale(1.05);
+}
+
+#download {
+    text-align: center;
+    background: #e0ffe0;
+    border: 2px solid #f32c2c;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+#download-link {
+    text-decoration: none;
+    color: #fff;
+    background-color: #4caf50;
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#download-link:hover {
+    background-color: #388e3c;
+    transform: scale(1.05);
+}
+
+#models {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+#models-container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.model {
+    background: #fff;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    text-align: center;
+    width: 200px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.model:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.model img {
+    max-width: 150%;
+    border-radius: 50px;
+    margin-bottom: 0.5rem;
+}
+
+footer {
+    text-align: center;
+    background-color: #111111;
+    color: #fff;
+    padding: 1.5rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+</style>
+<body>
+    <header>
+        <div id="logo-container">
+            <img src="./img/d.jpg" alt="Logotipo" id="logo">
+        </div>
+        <h1>Livro</h1>
+    </header>
+    <main>
+        
+
+        <section id="payment">
+            <h3>Ajuda PIX</h3>
+            <div id="qr-container">
+                <img src="./img/5.png" alt="QR Code para pagamento PIX">
+                <p>Ajudar Site: <strong></strong></p>
+                
+            </div>
+            <label for="payment-confirm">Ajuda Pix:</label>
+            <input type="text" id="payment-confirm" placeholder="Digite a chave PIX usada para o pagamento">
+            <button id="confirm-button">Confirmar</button>
+        </section>
+
+        <section id="download" style="display: none;">
+            <h3>Download Liberado</h3>
+           <a id="download-link" href="./img/As 48 leis do poder (Robert Greene).pdf" download>Baixar Livro</a>
+        </section>
+
+        <section id="models">
+            <h3>Modelos de Livros</h3>
+            <div id="models-container">
+                <div class="model">
+                    <img src="./img/as 48 leis do poder.png" alt="Modelo 1">
+                    <a id="download-link" href="./img/As 48 leis do poder (Robert Greene).pdf" download>Baixar Livro</a>
+                    <p>As 48 leis do poder</p>
+                </div>
+                <div class="model">
+                    <img src="./img/enoque.png" alt="Modelo 2">
+                    <a id="download-link" href="./img/LIVRO_DE_ENOQUE.pdf" download>Baixar Livro</a>
+                    <p>enoque</p>
+                </div>
+                <div class="model">
+                    <img src="./img/O_Grimorio_de_Sao_Cipriano.png" alt="Modelo 3">
+                    <a id="download-link" href="./img/O_Grimorio_de_Sao_Cipriano.pdf" download>Baixar Livro</a>
+                    <p>O_Grimorio_de_Sao_Cipriano</p>
+                </div>
+                
+                            <img src="./img/O_Livro_Negro_de_Sao_Cipriano_das_Almas.png" alt="Modelo 4">
+                            <a id="download-link" href="./img/O_Livro_Negro_de_Sao_Cipriano_das_Almas.pdf" download>Baixar Livro</a>
+                            <p>O_Livro_Negro_de_Sao_Cipriano_das_Almas</p>
+                        </div>
+                        <div class="model">
+                            <img src="./img/Sao_Cipriano_o_Feiticeiro_de_Antioquia.png" alt="Modelo 5">
+                            <a id="download-link" href="./img/Sao_Cipriano_o_Feiticeiro_de_Antioquia.pdf" download>Baixar Livro</a>
+                            <p>Sao_Cipriano_o_Feiticeiro_de_Antioquia</p>
+                        </div>
+                        <div class="model">
+                            <img src="./img/SAO_CIPRIANO_O_Legitimo_Capa_Preta.png" alt="Modelo 6">
+                            <a id="download-link" href="./img/SAO_CIPRIANO_O_Legitimo_Capa_Preta.pdf" download>Baixar Livro</a>
+                            <p>SAO_CIPRIANO_O_Legitimo_Capa_Preta</p>
+                        </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Livro Refletir. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
